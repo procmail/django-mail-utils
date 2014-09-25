@@ -1,7 +1,10 @@
 import os
 import warnings
 
-from email.MIMEImage import MIMEImage
+try:
+    from email.mime.image import MIMEImage
+except:
+    from email.MIMEImage import MIMEImage
 
 from django.core.exceptions import ImproperlyConfigured
 from django.template import loader, Context
